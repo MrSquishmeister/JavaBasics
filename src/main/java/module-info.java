@@ -6,4 +6,6 @@ module com.lee.javabasics {
 
     opens com.lee.javabasics to javafx.fxml;
     exports com.lee.javabasics;
+    exports com.lee.javabasics.controller;
+    opens com.lee.javabasics.controller to javafx.fxml;
 }
