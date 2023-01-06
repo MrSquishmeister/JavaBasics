@@ -33,10 +33,16 @@ public class CalculatorController {
         String operatorString = button.getText();
         char operator = operatorString.charAt(0);
 
-        num1 = Integer.parseInt(num1TextField.getText());
-        num2 = Integer.parseInt(num2TextField.getText());
-        result = CalculatorModel.calculate(num1, num2, operator);
-        resultLabel.setText(String.valueOf(result));
+        try{
+            num1 = Integer.parseInt(num1TextField.getText());
+            num2 = Integer.parseInt(num2TextField.getText());
+            result = CalculatorModel.calculate(num1, num2, operator);
+            resultLabel.setText(String.valueOf(result));
+        }
+        catch (NumberFormatException e){
+            resultLabel.setText("Enter a number");
+        }
+
     }
 
     @FXML

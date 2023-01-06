@@ -25,8 +25,13 @@ public class NumberGameController {
 
     @FXML
     void CheckButtonClick(ActionEvent event) {
-        numGuess = Integer.parseInt(guessTextField.getText());
-        hintLabel.setText(NumberGameModel.Hint(numGuess));
+        try{
+            numGuess = Integer.parseInt(guessTextField.getText());
+            hintLabel.setText(NumberGameModel.Hint(numGuess));
+        }
+        catch (NumberFormatException e){
+            hintLabel.setText("Enter a number");
+        }
     }
 
     @FXML
