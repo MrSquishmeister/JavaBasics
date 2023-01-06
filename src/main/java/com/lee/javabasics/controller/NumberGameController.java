@@ -2,9 +2,7 @@ package com.lee.javabasics.controller;
 
 import com.lee.javabasics.SceneSwitch;
 import com.lee.javabasics.model.NumberGameModel;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -18,15 +16,12 @@ public class NumberGameController {
     private Label hintLabel;
     @FXML
     private AnchorPane numbergameAnchorPane;
-
-    private int numGuess;
     private NumberGameModel NumberGameModel = new NumberGameModel();
 
-
     @FXML
-    void CheckButtonClick(ActionEvent event) {
+    void CheckButtonClick() {
         try{
-            numGuess = Integer.parseInt(guessTextField.getText());
+            int numGuess = Integer.parseInt(guessTextField.getText());
             hintLabel.setText(NumberGameModel.Hint(numGuess));
         }
         catch (NumberFormatException e){

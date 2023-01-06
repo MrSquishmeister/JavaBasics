@@ -16,7 +16,6 @@ public class IntroController {
     private TextField nameTextField;
     @FXML
     private Label reverseLabel;
-
     String name;
     private IntroModel IntroModel = new IntroModel();
 
@@ -27,12 +26,17 @@ public class IntroController {
     }
 
     @FXML
-    void onCalculatorButtonClick() throws IOException {
+    void CalculatorButtonClick() throws IOException {
         new SceneSwitch(introAnchorPane, "view/calculator-view.fxml");
     }
 
     @FXML
-    void onNumberGameButtonClick() throws IOException {
+    void NumberGameButtonClick() throws IOException {
         new SceneSwitch(introAnchorPane, "view/numbergame-view.fxml");
+    }
+
+    @FXML
+    void BankButtonClick() throws IOException {
+        new SceneSwitch(introAnchorPane, "view/bank-view.fxml");
     }
 }

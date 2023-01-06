@@ -12,19 +12,14 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class CalculatorController {
-
     @FXML
     AnchorPane calculatorAnchorPane;
     @FXML
     private TextField num1TextField;
-
     @FXML
     private TextField num2TextField;
-
     @FXML
     private Label resultLabel;
-
-    private int num1, num2, result;
     private CalculatorModel CalculatorModel = new CalculatorModel();
 
     @FXML
@@ -34,9 +29,9 @@ public class CalculatorController {
         char operator = operatorString.charAt(0);
 
         try{
-            num1 = Integer.parseInt(num1TextField.getText());
-            num2 = Integer.parseInt(num2TextField.getText());
-            result = CalculatorModel.calculate(num1, num2, operator);
+            int num1 = Integer.parseInt(num1TextField.getText());
+            int num2 = Integer.parseInt(num2TextField.getText());
+            int result = CalculatorModel.calculate(num1, num2, operator);
             resultLabel.setText(String.valueOf(result));
         }
         catch (NumberFormatException e){

@@ -11,13 +11,14 @@
        <Button layoutX="25.0" layoutY="105.0" onAction="#onReverseButtonClick" text="Reverse Name" />
    
                             <Label fx:id="reverseLabel" layoutX="319.0" layoutY="109.0" prefHeight="17.0" prefWidth="193.0" />
-      <Button layoutX="25.0" layoutY="152.0" onAction="#onCalculatorButtonClick" text="Calculator" />
+      <Button layoutX="25.0" layoutY="152.0" onAction="#CalculatorButtonClick" text="Calculator" />
       <TextField fx:id="nameTextField" layoutX="144.0" layoutY="105.0" promptText="Name" />
       <Label layoutX="25.0" layoutY="29.0" text="Basic Programs">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="25.0" layoutY="195.0" onAction="#onNumberGameButtonClick" text="Number Game" />
+      <Button layoutX="25.0" layoutY="195.0" onAction="#NumberGameButtonClick" text="Number Game" />
+      <Button layoutX="25.0" layoutY="239.0" onAction="#BankButtonClick" text="Bank System" />
    </children>
 </AnchorPane>
