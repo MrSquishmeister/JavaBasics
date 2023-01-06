@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.javabasics.controller.CalculatorController">
+<AnchorPane fx:id="calculatorAnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.javabasics.controller.CalculatorController">
    <children>
-      <TextField fx:id="num1TextField" layoutX="25.0" layoutY="96.0" promptText="First Number" />
-      <TextField fx:id="num2TextField" layoutX="194.0" layoutY="96.0" promptText="Second Number" />
+      <TextField fx:id="num1TextField" layoutX="25.0" layoutY="142.0" prefHeight="62.0" prefWidth="275.0" promptText="First Number" />
+      <TextField fx:id="num2TextField" layoutX="25.0" layoutY="234.0" prefHeight="62.0" prefWidth="275.0" promptText="Second Number" />
       <Label fx:id="resultLabel" layoutX="25.0" layoutY="29.0" prefHeight="49.0" prefWidth="175.0" text="Result" textAlignment="CENTER">
          <font>
             <Font size="31.0" />
@@ -31,6 +31,11 @@
       <Button layoutX="700.0" layoutY="310.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="49.0" prefWidth="47.0" text="+">
          <font>
             <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="35.0" prefWidth="56.0" text="Back">
+         <font>
+            <Font size="11.0" />
          </font>
       </Button>
    </children>

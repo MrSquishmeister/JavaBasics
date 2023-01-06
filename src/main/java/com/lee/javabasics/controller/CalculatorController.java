@@ -1,14 +1,20 @@
 package com.lee.javabasics.controller;
 
+import com.lee.javabasics.SceneSwitch;
 import com.lee.javabasics.model.CalculatorModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class CalculatorController {
 
+    @FXML
+    AnchorPane calculatorAnchorPane;
     @FXML
     private TextField num1TextField;
 
@@ -31,6 +37,11 @@ public class CalculatorController {
         num2 = Integer.parseInt(num2TextField.getText());
         result = CalculatorModel.calculate(num1, num2, operator);
         resultLabel.setText(String.valueOf(result));
+    }
+
+    @FXML
+    void onBackButtonClick() throws IOException {
+        new SceneSwitch(calculatorAnchorPane, "view/intro-view.fxml");
     }
 
 }
