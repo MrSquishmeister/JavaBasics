@@ -8,15 +8,16 @@
 
 <AnchorPane fx:id="introAnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.javabasics.controller.IntroController">
    <children>
-       <Button layoutX="63.0" layoutY="110.0" onAction="#onReverseButtonClick" text="Reverse Name" />
+       <Button layoutX="25.0" layoutY="105.0" onAction="#onReverseButtonClick" text="Reverse Name" />
    
-                            <Label fx:id="reverseLabel" layoutX="357.0" layoutY="114.0" prefHeight="17.0" prefWidth="193.0" />
-      <Button layoutX="63.0" layoutY="157.0" onAction="#onCalculatorButtonClick" text="Calculator" />
-      <TextField fx:id="nameTextField" layoutX="182.0" layoutY="110.0" promptText="Name" />
-      <Label layoutX="63.0" layoutY="41.0" text="Basic Programs">
+                            <Label fx:id="reverseLabel" layoutX="319.0" layoutY="109.0" prefHeight="17.0" prefWidth="193.0" />
+      <Button layoutX="25.0" layoutY="152.0" onAction="#onCalculatorButtonClick" text="Calculator" />
+      <TextField fx:id="nameTextField" layoutX="144.0" layoutY="105.0" promptText="Name" />
+      <Label layoutX="25.0" layoutY="29.0" text="Basic Programs">
          <font>
-            <Font size="28.0" />
+            <Font size="30.0" />
          </font>
       </Label>
+      <Button layoutX="25.0" layoutY="195.0" onAction="#onNumberGameButtonClick" text="Number Game" />
    </children>
 </AnchorPane>

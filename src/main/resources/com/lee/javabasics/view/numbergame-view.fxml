@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="numbergameAnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.javabasics.controller.NumberGameController">
+   <children>
+      <Label fx:id="hintLabel" layoutX="25.0" layoutY="29.0" text="Hint">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkButton" layoutX="25.0" layoutY="206.0" mnemonicParsing="false" onAction="#CheckButtonClick" text="Check">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="guessTextField" layoutX="25.0" layoutY="128.0" prefHeight="46.0" prefWidth="198.0" promptText="Guess">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#BackButtonClick" prefHeight="35.0" prefWidth="56.0" text="Back">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

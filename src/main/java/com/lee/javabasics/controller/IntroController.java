@@ -1,7 +1,6 @@
 package com.lee.javabasics.controller;
 
 import com.lee.javabasics.SceneSwitch;
-import com.lee.javabasics.model.CalculatorModel;
 import com.lee.javabasics.model.IntroModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -19,7 +18,7 @@ public class IntroController {
     private Label reverseLabel;
 
     String name;
-    private com.lee.javabasics.model.IntroModel IntroModel = new IntroModel();
+    private IntroModel IntroModel = new IntroModel();
 
     @FXML
     protected void onReverseButtonClick() {
@@ -30,5 +29,10 @@ public class IntroController {
     @FXML
     void onCalculatorButtonClick() throws IOException {
         new SceneSwitch(introAnchorPane, "view/calculator-view.fxml");
+    }
+
+    @FXML
+    void onNumberGameButtonClick() throws IOException {
+        new SceneSwitch(introAnchorPane, "view/numbergame-view.fxml");
     }
 }
