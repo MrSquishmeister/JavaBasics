@@ -3,6 +3,7 @@ module com.lee.javabasics {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires java.sql;
 
     opens com.lee.javabasics to javafx.fxml;
     exports com.lee.javabasics;
