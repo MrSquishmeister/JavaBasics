@@ -33,7 +33,8 @@ public class BankController {
     @FXML
     private Label balanceLabel;
     private BankModel BankModel = new BankModel();
-    private int userID, userPIN, userBalance;
+    private int userID;
+    private int userBalance;
 
     void AccountSuccess(){
         loginPane.setVisible(false);
@@ -46,7 +47,7 @@ public class BankController {
     void onloginButtonClick() {
         try{
             userID = Integer.parseInt(userIDTextField.getText());
-            userPIN = Integer.parseInt(userPinTextField.getText());
+            int userPIN = Integer.parseInt(userPinTextField.getText());
             userBalance = BankModel.Login(userID, userPIN);
             AccountSuccess();
         }
