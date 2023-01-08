@@ -7,19 +7,30 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="bankAnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.javabasics.controller.BankController">
    <children>
-      <Label layoutX="25.0" layoutY="29.0" prefHeight="45.0" prefWidth="328.0" text="Welcome to the Bank">
+      <Label fx:id="welcomeLabel" layoutX="25.0" layoutY="29.0" prefHeight="46.0" prefWidth="570.0" text="Welcome to the Bank">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#BackButtonClick" prefHeight="35.0" prefWidth="56.0" text="Back">
+      <Button layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="35.0" prefWidth="56.0" text="Back">
          <font>
             <Font size="11.0" />
          </font>
       </Button>
+      <Pane fx:id="accountPane" layoutX="246.0" layoutY="101.0" prefHeight="232.0" prefWidth="214.0" visible="false">
+         <children>
+            <Label fx:id="balanceLabel" layoutX="51.0" layoutY="60.0" prefHeight="17.0" prefWidth="113.0" text="userBalance" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputTextField" layoutX="33.0" layoutY="104.0" promptText="input value" />
+            <Button layoutX="33.0" layoutY="159.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="35.0" prefWidth="63.0" text="Deposit" />
+            <Button layoutX="122.0" layoutY="159.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="35.0" prefWidth="70.0" text="Withdraw" />
+         </children>
+      </Pane>
       <Pane fx:id="loginPane" layoutX="246.0" layoutY="101.0" prefHeight="232.0" prefWidth="214.0">
          <children>
             <TextField fx:id="userIDTextField" layoutX="14.0" layoutY="33.0" promptText="User ID">
@@ -33,23 +44,7 @@
                </font>
             </TextField>
             <Label fx:id="promptLabel" layoutX="27.0" layoutY="124.0" prefHeight="35.0" prefWidth="160.0" textAlignment="CENTER" />
-            <Button layoutX="79.0" layoutY="170.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="35.0" prefWidth="56.0" text="Login" />
-         </children>
-      </Pane>
-      <Pane fx:id="bankPane" layoutX="168.0" layoutY="81.0" prefHeight="268.0" prefWidth="370.0" visible="false">
-         <children>
-            <Label fx:id="balanceLabel" layoutX="102.0" layoutY="84.0" prefHeight="35.0" prefWidth="167.0" text="Balance">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Button layoutX="66.0" layoutY="184.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="88.0" text="Withdraw" />
-            <Button layoutX="217.0" layoutY="184.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="88.0" text="Deposit" />
-            <Label fx:id="userIDLabel" layoutX="27.0" layoutY="34.0" prefHeight="35.0" prefWidth="167.0" text="userID">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
+            <Button layoutX="79.0" layoutY="170.0" mnemonicParsing="false" onAction="#onloginButtonClick" prefHeight="35.0" prefWidth="56.0" text="Login" />
          </children>
       </Pane>
    </children>
